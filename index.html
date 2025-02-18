@@ -107,33 +107,72 @@
         padding: 5px 0;
         font-size: 14px;
     }
+
+    .overlay {
+   display: none !important;
+}
  
 </style>
 
 </head>
 
 <body>
-    <!-- Top Information Bar -->
-    <div class="container-fluid bg-light p-0 top-info">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>Frisco, Texas</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                     <small class="far fa-envelope-open text-primary me-2"></small>
-                    <small>info@ionnova.com</small>
-                </div>
+<!-- Top Information Bar -->
+<div class="container-fluid bg-light p-0 top-info">
+    <div class="row gx-0 d-none d-lg-flex">
+        <!-- Left Side - Address & Email -->
+        <div class="col-lg-7 px-5 text-start">
+            <!-- Clickable Address -->
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small>
+                    <a href="https://www.google.com/maps/place/Frisco,+Texas"
+                       target="_blank"
+                       class="top-info-link">
+                        Frisco, Texas
+                    </a>
+                </small>
             </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+1 214 429 9312</small>
-                </div>
+            
+            <!-- Clickable Email -->
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-envelope-open text-primary me-2"></small>
+                <small>
+                    <a href="mailto:info@ionnova.com" class="top-info-link">
+                        info@ionnova.com
+                    </a>
+                </small>
+            </div>
+        </div>
+
+        <!-- Right Side - Phone -->
+        <div class="col-lg-5 px-5 text-end">
+            <!-- Clickable Phone Number -->
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small>
+                    <a href="tel:+12144299312" class="top-info-link">
+                        +1 214 429 9312
+                    </a>
+                </small>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Hover Effect Styling -->
+<style>
+    .top-info-link {
+        text-decoration: none;
+        color: #212529; /* Keeps original text color */
+        transition: color 0.3s ease-in-out;
+    }
+
+    .top-info-link:hover {
+        color: #17a2b8; /* Matches social media link hover effect */
+    }
+</style>
+
 
     <!-- Navbar -->
     <div class="navbar-wrapper">
@@ -286,63 +325,114 @@
 </section>
 
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container-fluid header bg-primary p-0 mb-5" style="margin-top: 200px;">
-            <div class="row g-0 align-items-center flex-column-reverse flex-lg-row">
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="img/header-page.jpg" alt="Software Development">
-                </div>
-                <div class="col-lg-6 p-5 text-center">
-                    <h1 class="display-4 text-white mb-5">Contact Us</h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                                <i class="fa fa-map-marker-alt text-primary"></i>
-                            </div>
-                            <div class="ms-4">
-                                <h4 class="mb-3">Address</h4>
-                                <p class="mb-0">12206 Peachtree Lane</p>
-                                <p class="mb-0">Frisco, TX 75035</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                                <i class="fa fa-phone-alt text-primary"></i>
-                            </div>
-                            <div class="ms-4">
-                                <h4 class="mb-3">Call Us Now</h4>
-                                <p class="mb-0">+1 (214) 429-9312</p>
-                                <p class="mb-0">+1 (214) 429-1490</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="h-100 bg-light rounded d-flex align-items-center p-5">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                                <i class="fa fa-envelope-open text-primary"></i>
-                            </div>
-                            <div class="ms-4">
-                                <h4 class="mb-3">Email Us</h4>
-                                <p class="mb-0">info@ionnova.com</p>
-                            </div>
-                        </div>
-                    </div>
+   
+<!-- Contact Section -->
+<section id="contact">
+    <!-- Hero Section -->
+    <div class="container-fluid header bg-primary p-0 mb-5 position-relative" style="margin-top: 200px;">
+        <div class="row g-0 align-items-center flex-column-reverse flex-lg-row">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="img/header-page.jpg" alt="Software Development">
+                    <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
                 </div>
             </div>
+            <div class="col-lg-6 p-5 text-center">
+                <h1 class="display-4 text-white mb-3 fw-bold">Contact Us</h1>
+                <p class="text-white-50 mb-4">Let's discuss how we can bring your ideas to life.</p>
+            </div>
         </div>
+    </div>
 
-        <!-- Contact form -->
-        <div class="row justify-content-center">
+    <!-- Contact Details -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Address -->
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light shadow-sm rounded d-flex align-items-center p-5 transition">
+                        <div class="icon-box bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-map-marker-alt text-primary fs-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-3">Our Address</h4>
+                            <p class="mb-1">
+                                <a href="https://www.google.com/maps/place/12206+Peachtree+Lane+Frisco+TX+75035" 
+                                   target="_blank" 
+                                   class="contact-link">
+                                    12206 Peachtree Lane
+                                </a>
+                            </p>
+                            <p class="mb-0">
+                                <a href="https://www.google.com/maps/place/Frisco,+Texas" 
+                                   target="_blank" 
+                                   class="contact-link">
+                                    Frisco, TX 75035
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Phone -->
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light shadow-sm rounded d-flex align-items-center p-5 transition">
+                        <div class="icon-box bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-primary fs-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-3">Call Us</h4>
+                            <p class="mb-1">
+                                <a href="tel:+12144299312" class="contact-link">
+                                    +1 (214) 429-9312
+                                </a>
+                            </p>
+                            <p class="mb-0">
+                                <a href="tel:+12144291490" class="contact-link">
+                                    +1 (214) 429-1490
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Email -->
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light shadow-sm rounded d-flex align-items-center p-5 transition">
+                        <div class="icon-box bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-envelope-open text-primary fs-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-3">Email Us</h4>
+                            <p class="mb-0">
+                                <a href="mailto:info@ionnova.com" class="contact-link">
+                                    info@ionnova.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hover Effect Styling -->
+            <style>
+                .contact-link {
+                    text-decoration: none;
+                    color: #212529; /* Keeps the original text color */
+                    transition: color 0.3s ease-in-out;
+                }
+            
+                .contact-link:hover {
+                    color: #17a2b8; /* Same hover effect as social media links */
+                }
+            </style>
+            
+        </div>
+    </div>
+
+    <!-- Get in Touch Section -->
+     
+         <div class="row justify-content-center">
             <div class="col-md-6">
               <div class="card shadow-lg p-4">
                 <h1 class="text-center" style="color:#0074D9;">Get in Touch</h1>
@@ -367,7 +457,7 @@
                     </div>
           
                     <div class="mb-3">
-                      <label for="comment" class="form-label">Comments (Optional)</label>
+                      <label for="comment" class="form-label">Message</label>
                       <textarea id="comment" name="comment" class="form-control" rows="4"></textarea>
                     </div>
           
@@ -380,28 +470,72 @@
               </div>
             </div>
           </div>
-          
-    </section>
+</section>
 
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Information -->
+            <div class="col-lg-6">
+                <h5 class="text-light mb-4">Contact Us</h5>
+                
+                <!-- Address with Google Maps Link -->
+                <p>
+                    <i class="fa fa-map-marker-alt me-3"></i>
+                    <a href="https://www.google.com/maps/place/Frisco,+Texas" 
+                       target="_blank" 
+                       class="footer-link">
+                        Frisco, Texas - Nationwide Service
+                    </a>
+                </p>
 
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <h5 class="text-light mb-4">Contact Us</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Frisco, Texas - Nationwide Service</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+1 214 429 9312</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@ionnova.com</p>
-                </div>
-                <div class="col-lg-6">
-                    <h5 class="text-light mb-4">Follow Us</h5>
-                    <a class="btn btn-outline-light btn-social rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social rounded-circle me-2" href="https://www.linkedin.com/company/ion-nova"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social rounded-circle" href="#"><i class="fab fa-facebook"></i></a>
-                </div>
+                <!-- Clickable Phone Number -->
+                <p>
+                    <i class="fa fa-phone-alt me-3"></i>
+                    <a href="tel:+12144299312" class="footer-link">
+                        +1 214 429 9312
+                    </a>
+                </p>
+
+                <!-- Clickable Email Address -->
+                <p>
+                    <i class="fa fa-envelope me-3"></i>
+                    <a href="mailto:info@ionnova.com" class="footer-link">
+                        info@ionnova.com
+                    </a>
+                </p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="col-lg-6">
+                <h5 class="text-light mb-4">Follow Us</h5>
+                <a class="btn btn-outline-light btn-social rounded-circle me-2" href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-outline-light btn-social rounded-circle me-2" href="https://www.linkedin.com/company/ion-nova">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-outline-light btn-social rounded-circle" href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Hover Effect Styles -->
+<style>
+    .footer-link {
+        text-decoration: none;
+        color: #ffffff; /* Keep the text color as it is */
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .footer-link:hover {
+        color: #17a2b8; /* Same hover color as social media links */
+    }
+</style>
+
 </body>
 
 </html>
