@@ -22,6 +22,8 @@
         // Ensure DOM is fully loaded before attaching the event listener
         document.addEventListener('DOMContentLoaded', function() {
           // Contact Form Submission
+          const urlParams = new URLSearchParams(window.location.search);
+          const sourceValue = urlParams.get("source") || "Default Source"; 
           var contactForm = document.getElementById("contactForm");
           var formContainer = document.getElementById("formContainer");
           var submittingMessage = document.getElementById("submittingMessage");
