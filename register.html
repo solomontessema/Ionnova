@@ -82,7 +82,13 @@
                 // Hide submitting message and show success message
                 submittingMessage.style.display = "none";
                 responseMessage.style.display = "block";
-                responseMessage.innerText = "Your message has been successfully submitted. We will reach you as soon as possible. Thank you!";
+                responseMessage.innerHTML = `
+  <div>
+    <h5 class="text-success mb-3">✅ You're subscribed!</h5>
+    <p class="text-muted">Thank you for your interest in the <strong>free webinar</strong> by <strong>Ionnova Academy</strong>.</p>
+    <p>We’ve received your information and will send you the webinar access details shortly.</p>
+    <p class="mt-3">📧 Please check your email for confirmation.</p>
+  </div>`
                 successInstruction.style.display = "none";
                 contactForm.reset();
               } catch (error) {
